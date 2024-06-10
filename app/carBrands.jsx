@@ -1,19 +1,12 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export default function MenuScreen({ navigation }) {
+export default function CarBrandsScreen({ navigation }) {
   return (
     <View style={styles.container}>
         <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
         <View style={styles.body}>
-            <TouchableOpacity onPress={() => navigation.navigate('shop')}>
-              <Text style={styles.bodyText}>SHOP</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('location')}>
-              <Text style={styles.bodyText}>LOCATIONS</Text>
-            </TouchableOpacity>
-            <Text style={styles.bodyText}>CONTACT</Text>
-            <Text style={styles.bodyText}>ABOUT US</Text>
+            <Image source={require('../assets/AstonMartin.png')} style={styles.carBrandImage} />
         </View>
         <View style={styles.footer}>
             <View style={styles.spaceFooter}>

@@ -1,9 +1,14 @@
-import React from 'react';
-import { Provider } from 'react-redux';
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import CarBrandsScreen from './carBrands.jsx';
+import LocationScreen from './location.jsx';
+import store from './back-end/store.js';
+import { Provider } from 'react-redux';
 import HomeScreen from './index.jsx';
 import MenuScreen from './menu.jsx';
-import store from './back-end/store.js';
+import ShopScreen from './shop.jsx'
+import CartScreen from './cart.jsx';
+import React from 'react';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,12 +17,28 @@ const RootLayout = () => {
     <Provider store={store}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen
+          name="menu"
+          component={MenuScreen}
+        />
+        <Stack.Screen
+          name="cart"
+          component={CartScreen}
+        />
+        <Stack.Screen
           name="index"
           component={HomeScreen}
         />
         <Stack.Screen
-          name="menu"
-          component={MenuScreen}
+          name="shop"
+          component={ShopScreen}
+        />
+        <Stack.Screen
+          name="carBrands"
+          component={CarBrandsScreen}
+        />
+        <Stack.Screen
+          name="location"
+          component={LocationScreen}
         />
       </Stack.Navigator>
     </Provider>

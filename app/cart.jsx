@@ -6,14 +6,7 @@ export default function MenuScreen({ navigation }) {
     <View style={styles.container}>
         <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
         <View style={styles.body}>
-            <TouchableOpacity onPress={() => navigation.navigate('shop')}>
-              <Text style={styles.bodyText}>SHOP</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('location')}>
-              <Text style={styles.bodyText}>LOCATIONS</Text>
-            </TouchableOpacity>
-            <Text style={styles.bodyText}>CONTACT</Text>
-            <Text style={styles.bodyText}>ABOUT US</Text>
+            <Text>None</Text>
         </View>
         <View style={styles.footer}>
             <View style={styles.spaceFooter}>
