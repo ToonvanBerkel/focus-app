@@ -1,35 +1,13 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export default function CarBrandsScreen({ navigation }) {
+export default function LamborghiniScreen({ navigation }) {
   return (
     <View style={styles.container}>
         <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
         <View style={styles.body}>
             <Image source={require('../assets/TopFade.png')} style={styles.TopFade} />
             <Image source={require('../assets/BottomFade.png')} style={styles.BottomFade} />
-            <Text style={styles.headerText}>Brands</Text>
-            <Image source={require('../assets/Line.png')} style={styles.headerTextLine} />
-            <View style={styles.carBrandsList}>
-              <TouchableOpacity onPress={() => navigation.navigate('lamborghini')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/LamborghiniBanner.png')}  style={styles.carBrandImage} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('lamborghini')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/FerrariBanner.png')} style={styles.carBrandImage} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('lamborghini')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/BugattiBanner.png')} style={styles.carBrandImage} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('lamborghini')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/MaseratiBanner.png')} style={styles.carBrandImage} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('lamborghini')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/PorscheBanner.png')} style={styles.carBrandImage} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('lamborghini')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/AstonMartinBanner.png')} style={styles.carBrandImage} />
-              </TouchableOpacity>
-            </View>
         </View>
         <View style={styles.footer}>
             <View style={styles.spaceFooter}>

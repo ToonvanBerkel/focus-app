@@ -4,20 +4,21 @@ import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 export default function ShopScreen({ navigation }) {
   const [isBoxVisible, setIsBoxVisible] = useState(false);
 
+  const toggleBoxVisibility = () => {
+    setIsBoxVisible(!isBoxVisible);
+  };
+
   return (
     <View style={styles.container}>
       <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
       <View style={styles.body}>
-        <TouchableOpacity onPress={() => setIsBoxVisible(true)} style={styles.bodyChoiceImageOneBox}>
+        <TouchableOpacity onPress={toggleBoxVisibility} style={styles.bodyChoiceImageOneBox}>
           <Image source={require('../assets/Transport.png')} style={styles.bodyChoiceImageOne} />
         </TouchableOpacity>
         {isBoxVisible && (
           <View style={styles.LocationInformation}>
-            <TouchableOpacity onPress={() => setIsBoxVisible(false)} style={styles.closeButton}>
-              <Text style={styles.closeButtonText}>X</Text>
-            </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('carBrands')}>
-                <Text style={styles.LocationInformationHeader}>Cars</Text>
+              <Text style={styles.LocationInformationHeader}>Cars</Text>
             </TouchableOpacity>
             <Text style={styles.LocationInformationHeader}>Motorcycle</Text>
             <Text style={styles.LocationInformationHeaderNo}>Planes</Text>
