@@ -6,8 +6,27 @@ export default function MenuScreen({ navigation }) {
     <View style={styles.container}>
       <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
       <View style={styles.body}>
-        <Text style={styles.bodyButtons}>Continue shopping</Text>
-        <Text style={styles.bodyButtons}>Checkout</Text>
+        
+        <View style={styles.cart}>
+          <View style={styles.cartItem}>
+            <Image source={require('../assets/RolexCartExample.png')} style={styles.cartItemImage} />
+            <View style={styles.cartInformation}>
+              <Text style={styles.cartItemTitle}>Rolex</Text>
+              <Text style={styles.cartItemProperty}>* silver</Text>
+            </View>
+            <Text style={styles.cartItemPrice}>$10.000,-</Text>
+          </View>
+          <View style={styles.cartItemEndPrice}>
+            <Text style={styles.cartItemAddition}>+</Text>
+            <Text style={styles.cartItemFinalPrice}>$10.000,-</Text>
+          </View>
+        </View>
+        <TouchableOpacity onPress={() => navigation.navigate('shop')}>
+          <Text style={styles.bodyButtons}>Continue shopping</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('index')}>
+          <Text style={styles.bodyButtons}>Checkout</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.footer}>
         <View style={styles.spaceFooter}>
@@ -38,6 +57,58 @@ const styles = StyleSheet.create({
     width: '100%',
     zIndex: 1,
     marginTop: 20,
+  },
+  cart: {
+    width: '90%',
+    position: 'absolute',
+    top: 80,
+  },
+  cartItemAddition: {
+    color: '#ffffff',
+    borderStyle: 'solid',
+    borderColor: '#ffffff',
+    borderBottomWidth: 1,
+    width: '100%',
+    textAlign: 'right',  
+  },
+  cartItemFinalPrice: {
+    color: '#ffffff',
+  },
+  cartItemEndPrice: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-end',
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+  },
+  cartItem: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  cartItemImage: {
+    width: 150,
+    height: 150,
+  },
+  cartItemPrice: {
+    paddingVertical: 10,
+    width: 80,
+    textAlign: 'right',
+    color: '#ffffff',
+  },
+  cartInformation: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    width: 140,
+    color: '#ffffff',
+  },
+  cartItemTitle: {
+    color: '#ffffff',
+    fontSize: 20,
+  },
+  cartItemProperty: {
+    color: '#ffffff',
+    paddingLeft: 10,
   },
   body: {
     flex: 1,
