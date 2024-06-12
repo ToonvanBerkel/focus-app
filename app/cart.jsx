@@ -4,23 +4,24 @@ import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 export default function MenuScreen({ navigation }) {
   return (
     <View style={styles.container}>
-        <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
-        <View style={styles.body}>
-            <Text>None</Text>
+      <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
+      <View style={styles.body}>
+        <Text style={styles.bodyButtons}>Continue shopping</Text>
+        <Text style={styles.bodyButtons}>Checkout</Text>
+      </View>
+      <View style={styles.footer}>
+        <View style={styles.spaceFooter}>
+          <TouchableOpacity onPress={() => navigation.navigate('index')}>
+            <Text style={styles.footerText}>ENGLISH</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('index')}>
+            <Image source={require('../assets/LU.png')} style={styles.footerImage} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('menu')}>
+            <Image source={require('../assets/Menu.png')} style={styles.footerImage} />
+          </TouchableOpacity>
         </View>
-        <View style={styles.footer}>
-            <View style={styles.spaceFooter}>
-                <TouchableOpacity onPress={() => navigation.navigate('index')}>
-                  <Text style={styles.footerText}>ENGLISH</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('index')}>
-                  <Image source={require('../assets/LU.png')} style={styles.footerImage} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('menu')}>
-                  <Image source={require('../assets/Menu.png')} style={styles.footerImage} />
-                </TouchableOpacity>
-            </View>
-        </View>
+      </View>
     </View>
   );
 }
@@ -42,6 +43,15 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  bodyButtons: {
+    color: 'white',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    backgroundColor: '#547782',
+    width: 200,
+    textAlign: 'center',
+    marginTop: 20,
   },
   bodyText: {
     color: 'white',

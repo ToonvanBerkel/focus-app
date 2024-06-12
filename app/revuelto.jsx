@@ -1,27 +1,32 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export default function LamborghiniScreen({ navigation }) {
+export default function RevueltoScreen({ navigation }) {
   return (
     <View style={styles.container}>
         <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
         <View style={styles.body}>
-            <Image source={require('../assets/TopFade.png')} style={styles.TopFade} />
-            <Image source={require('../assets/BottomFade.png')} style={styles.BottomFade} />
-            <View style={styles.carBrandsList}>
-              <TouchableOpacity onPress={() => navigation.navigate('revuelto')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/Revuelto.png')}  style={styles.carBrandImage} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('lamborghini')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/HuracanSterrato.png')} style={styles.carBrandImage} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('lamborghini')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/HuracanTecnica.png')} style={styles.carBrandImage} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('lamborghini')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/HuracanSTO.png')} style={styles.carBrandImage} />
-              </TouchableOpacity>
+            <Image source={require('../assets/RevueltoBg.png')} style={styles.bodyImage } />
+            <View style={styles.bodyTitle}>
+              <Text style={styles.bodyText}>REVUELTO</Text>
+              <Text style={styles.bodyTextSmaller}>FROM NOW ON</Text>
+              <View style={styles.bodyDetail}>
+                <Text style={styles.bodyTextSmall}>POWER (combined ICE+EE)</Text>
+                <Text style={styles.bodyTextSmallSpace}>1015 CV</Text>
+                <Text style={styles.bodyTextSmall}>MAX. SPEED</Text>
+                <Text style={styles.bodyTextSmallSpace}>>350 km/h</Text>
+                <Text style={styles.bodyTextSmall}>0-100 km/h</Text>
+                <Text style={styles.bodyTextSmall}>2.5 s</Text>
+              </View>
             </View>
+            <Text style={styles.bodyTextNote}>To get a custom made Revuelto visit one of our locations.</Text>
+        </View>
+        <View style={styles.footerSecond}>
+          <Text style={styles.footerPrice}>Price $6.000.000,-</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('cart')} style={styles.footerShoppingCart}>
+              <Text style={styles.footerShoppingCartText}>Add to cart</Text>
+              <Image source={require('../assets/ShoppingBasket.png')} style={styles.footerImageCart} />
+          </TouchableOpacity>
         </View>
         <View style={styles.footer}>
             <View style={styles.spaceFooter}>
@@ -45,82 +50,107 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#0D0D0D',
   },
-  TopFade: {
+  footerSecond: {
     position: 'absolute',
-    top: -100,
-    zIndex: 1,
-    width: '100%',
-    height: '20%',
+    bottom: 70,
+    left: '5%',
+    width: '90%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
-  BottomFade: {
+  footerPrice: {
+    color: 'white',
+    fontSize: 18,
     position: 'absolute',
-    bottom: -70,
-    zIndex: 1,
-    width: '100%',
-    height: '20%',
+    bottom: 0,
+  },
+  footerShoppingCart: {
+    display: 'flex',
+    flexDirection: 'row',
+    backgroundColor: 'rgba(217, 217, 217, 0.24)',
+    padding: 10,
+    position: 'absolute',
+    right: 0,
+    top: -35,
+  },
+  footerShoppingCartText: {
+    color: 'white',
+  },
+  footerImageCart: {
+    width: 20,
+    height: 20,
+    marginLeft: 10,
   },
   header: {
     height: 80,
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    zIndex: 2,
+    zIndex: 1,
     marginTop: 20,
-  },
-  headerText: {
-    position: 'absolute',
-    top: 0,
-    width: '100%',
-    textAlign: 'center',
-    color: 'white',
-    zIndex: 2, 
-    fontSize: 40,
-  },
-  headerTextLine: {
-    position: 'absolute',
-    top: 50,
-    width: '70%',
-    height: '0.65%',
-    zIndex: 2, 
   },
   body: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  carBrandsList: {
-    flex: 1,
+  bodyText: {
+    color: 'white',
+    fontSize: 50,
+    textAlign: 'center',
+    width: '80%',
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  bodyTextNote: {
     position: 'absolute',
-    top: 80,
-    height: '100%',
+    bottom: 100,
+    color: 'white',
+    fontSize: 17,
+    textAlign: 'center',
+    width: '90%',
+    fontWeight: 'normal',
+    marginBottom: 10,
+  },
+  bodyDetail: {
+    marginTop: 10,
     width: '100%',
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  carBrandImageClick: {
+  bodyTitle: {
+    position: 'absolute',
+    top: 50,
     width: '100%',
-    height: '30%',
-  },
-  carBrandImage: {
-    width: '100%',
-    height: '100%',
-  },
-  bodyText: {
-    color: 'white',
-    fontSize: 40,
-    textAlign: 'center',
-    width: '80%',
-    fontWeight: 'bold',
-    marginTop: 40,  
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   bodyTextSmall: {
-    position: 'absolute',
-    top: 425,
     color: 'white',
-    fontSize: 20,
+    fontSize: 22,
+    textAlign: 'center',
+    fontWeight: 'normal',
+  },
+  bodyTextSmallSpace: {
+    color: 'white',
+    fontSize: 22,
+    textAlign: 'center',
+    fontWeight: 'normal',
+    marginBottom: 20,
+  },
+  bodyTextSmaller: {
+    color: 'white',
+    fontSize: 30,
     textAlign: 'center',
     width: '80%',
-    fontWeight: 'bold',
+    fontWeight: 'normal',
+    marginBottom: 10,
+    borderColor: 'white',
+    borderStyle: 'solid',
+    borderBottomWidth: 1,
+    paddingBottom: 15,
   },
   bodyImage: {
     position: 'absolute',
@@ -182,7 +212,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     width: '90%',
     marginLeft: '5%',
-    zIndex: 2,
   },
   footerImage: {
     height: 20,

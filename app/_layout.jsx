@@ -10,6 +10,7 @@ import HomeScreen from './index.jsx';
 import ShopScreen from './shop.jsx'
 import CarBrandsScreen from './carBrands.jsx';
 import LamborghiniScreen from './lamborghini.jsx';
+import RevueltoScreen from './revuelto.jsx';
 import LocationScreen from './location.jsx';
 
 const Stack = createNativeStackNavigator();
@@ -24,6 +25,7 @@ const RootLayout = () => {
         <Stack.Screen name="shop" component={ShopScreen} />
         <Stack.Screen name="carBrands" component={CarBrandsScreen} />
         <Stack.Screen name="lamborghini" component={LamborghiniScreen} />
+        <Stack.Screen name="revuelto" component={RevueltoScreen} />
         <Stack.Screen name="location" component={LocationScreen} />
       </Stack.Navigator>
     </Provider>
