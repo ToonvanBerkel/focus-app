@@ -21,7 +21,9 @@ export default function ShopScreen({ navigation }) {
               <Text style={styles.LocationInformationHeader}>Cars</Text>
             </TouchableOpacity>
             <Text style={styles.LocationInformationHeader}>Motorcycle</Text>
-            <Text style={styles.LocationInformationHeaderNo}>Planes</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('planeBrands')}>
+              <Text style={styles.LocationInformationHeaderNo}>Planes</Text>
+            </TouchableOpacity>
           </View>
         )}
         <Image source={require('../assets/Suits.png')} style={styles.bodyChoiceImageTwo} />

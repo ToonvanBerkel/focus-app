@@ -12,8 +12,12 @@ export default function MenuScreen({ navigation }) {
             <TouchableOpacity onPress={() => navigation.navigate('location')}>
               <Text style={styles.bodyText}>LOCATIONS</Text>
             </TouchableOpacity>
-            <Text style={styles.bodyText}>CONTACT</Text>
-            <Text style={styles.bodyText}>ABOUT US</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('contact')}>
+              <Text style={styles.bodyText}>CONTACT</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('aboutus')}>
+              <Text style={styles.bodyText}>ABOUT US</Text>
+            </TouchableOpacity>
         </View>
         <View style={styles.footer}>
             <View style={styles.spaceFooter}>
