@@ -1,75 +1,41 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
 
-export default function RevueltoScreen({ navigation }) {
+export default function KawasakiNinjaHTwoRScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
       <ScrollView contentContainerStyle={styles.body}>
         <View style={styles.sectionOne}>
-          <Image source={require('../assets/RevueltoBg.png')} style={styles.bodyImage} />
+          <Image source={require('../assets/KawasakiNinjaH2RBg.png')} style={styles.bodyImage} />
           <View style={styles.bodyTitle}>
-            <Text style={styles.bodyText}>REVUELTO</Text>
-            <Text style={styles.bodyTextSmaller}>FROM NOW ON</Text>
+            <Text style={styles.bodyText}>NINJA H2R </Text>
+            <Text style={styles.bodyTextSmaller}>BUILT BEYOND BELIEF</Text>
             <View style={styles.bodyDetail}>
-              <Text style={styles.bodyTextSmall}>POWER (combined ICE+EE)</Text>
-              <Text style={styles.bodyTextSmallSpace}>1015 CV</Text>
-              <Text style={styles.bodyTextSmall}>MAX. SPEED</Text>
-              <Text style={styles.bodyTextSmallSpace}>>350 km/h</Text>
-              <Text style={styles.bodyTextSmall}>0-100 km/h</Text>
-              <Text style={styles.bodyTextSmall}>2.5 s</Text>
+              <Text style={styles.bodyTextSmall}>CYLINDER CAPACITY</Text>
+              <Text style={styles.bodyTextSmallSpace}>998 cm³</Text>
+              <Text style={styles.bodyTextSmall}>MAX. POWER</Text>
+              <Text style={styles.bodyTextSmall}>310 PK</Text>
             </View>
           </View>
-          <Text style={styles.bodyTextNote}>To get a custom made Revuelto visit one of our locations.</Text>
+          <Text style={styles.bodyTextNote}>To get a custom made Ninja H2R visit one of our locations.</Text>
         </View>
         <View style={styles.sectionTwo}>
-          <Image source={require('../assets/RevueltoVideo.png')} style={styles.productVideo} />
+          <Image source={require('../assets/KawasakiNinjaH2RVideo.png')} style={styles.productVideo} />
           <Text style={styles.bodyOverview}>Overview</Text>
           <Text style={styles.bodyOverviewText}>
-            Just before the 60th anniversary of the marque, Lamborghini unveiled Revuelto, the first HPEV (High Performance Electrified Vehicle) hybrid super sports car. With the Revuelto, Lamborghini has established a new benchmark in performance, on-board technology, and driving pleasure. The ultimate thrill provided by the Revuelto is reached thanks to a powertrain that delivers 1015 CV total, combining the power of a brand-new 12-cylinder internal combustion engine with three high-density electric motors and a groundbreaking transversal dual clutch e-gearbox. The power of hybridization is harnessed to take performance and driving emotions to an unprecedented level.
+            Created to be the ultimate in motorcycle performance: The Ninja H2R is a fantastic motorcycle masterpiece. Created using all available technical divisions within the Kawasaki group. The Ninja H2R has a revolutionary engine block with crushing performance, the highest quality components for it chassis and a whole range of high-quality details – all together this is a legend on two wheels.
           </Text>
           <Text style={styles.bodyOverviewText}>
-            Availability of the Lamborghini models may vary depending on the country. For more information, contact your local dealer.
+            This engine is not permitted for use on public roads.
           </Text>
-          <Text style={styles.bodyOverview}>Specifications</Text>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>DISPLACEMENT</Text>
-            <Text style={styles.specificationProperty}>6498.5 cm³ (396.6 cu in)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>MAX POWER (COMBINED ICE+EE)</Text>
-            <Text style={styles.specificationProperty}>1015 CV</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>TOP SPEED</Text>
-            <Text style={styles.specificationProperty}>>350 km/h</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>ACCELERATION 0-100 KM/H</Text>
-            <Text style={styles.specificationProperty}>2.5 s</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>COMBINED CONSUMPTION</Text>
-            <Text style={styles.specificationProperty}>11,86 l/100km (WLTP)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>COMBINED CO2 EMISSIONS</Text>
-            <Text style={styles.specificationProperty}>276 g/km (WLTP)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>ACCELERATION 0-100 KM/H</Text>
-            <Text style={styles.specificationProperty}>10,1 kWh/100 Km (WLTP)</Text>
-          </View>
-          <View style={styles.specificationNo}>
-            <Text style={styles.specificationName}>CO2 EFFICIENCY CLASS COMBINED</Text>
-            <Text style={styles.specificationProperty}>G (WLTP)</Text>
-          </View>
+          <Image source={require('../assets/KawasakiNinjaH2RModel.png')} style={styles.productModel} />
           <Text style={styles.note}>If you want more information visit the official site.</Text>
         </View>
       </ScrollView>
       <Image source={require('../assets/BottomFade.png')} style={styles.BottomFade} />
       <View style={styles.footerSecond}>
-        <Text style={styles.footerPrice}>Price $6.000.000,-</Text>
+        <Text style={styles.footerPrice}>Price $60.000,-</Text>
         <TouchableOpacity onPress={() => navigation.navigate('cart')} style={styles.footerShoppingCart}>
           <Text style={styles.footerShoppingCartText}>Add to cart</Text>
           <Image source={require('../assets/ShoppingBasket.png')} style={styles.footerImageCart} />
@@ -146,6 +112,11 @@ const styles = StyleSheet.create({
   },
   specificationName: {
     color: 'white',
+  },
+  productModel: {
+    width: '90%',
+    height: 220,
+    objectFit: 'contain',
   },
   specificationProperty: {
     color: 'white',
@@ -275,7 +246,9 @@ const styles = StyleSheet.create({
   bodyImage: {
     position: 'absolute',
     width: '100%',
-    height: '130%',
+    height: '100%',
+    objectFit: 'cover',
+    top: 200,
     zIndex: 0,
   },
   spaceFooter: {

@@ -1,33 +1,25 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export default function PlaneBrandsScreen({ navigation }) {
+export default function KawasakiScreen({ navigation }) {
   return (
     <View style={styles.container}>
         <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
         <View style={styles.body}>
             <Image source={require('../assets/TopFade.png')} style={styles.TopFade} />
             <Image source={require('../assets/BottomFade.png')} style={styles.BottomFade} />
-            <Text style={styles.headerText}>Brands</Text>
-            <Image source={require('../assets/Line.png')} style={styles.headerTextLine} />
             <View style={styles.carBrandsList}>
-              <TouchableOpacity onPress={() => navigation.navigate('embraer')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/EmbraerBanner.png')}  style={styles.carBrandImage} />
+              <TouchableOpacity onPress={() => navigation.navigate('kawasakiNinjaHTwoR')} style={styles.carBrandImageClick} >
+                <Image source={require('../assets/KawasakiNinjaH2R.png')}  style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/GulfstreamBanner.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/None.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/BombardierBanner.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/None.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/BoeingBanner.png')} style={styles.carBrandImage} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/DassaultSystemesBanner.png')} style={styles.carBrandImage} />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/CessnaBanner.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/None.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
             </View>
         </View>
@@ -99,7 +91,7 @@ const styles = StyleSheet.create({
   carBrandsList: {
     flex: 1,
     position: 'absolute',
-    top: 140,
+    top: 80,
     height: '100%',
     width: '100%',
     alignItems: 'center',
@@ -107,15 +99,11 @@ const styles = StyleSheet.create({
   },
   carBrandImageClick: {
     width: '100%',
-    height: '20%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: '30%',
   },
   carBrandImage: {
-    width: '90%',
-    height: '90%',
-    objectFit: 'fill',
+    width: '100%',
+    height: '100%',
   },
   bodyText: {
     color: 'white',

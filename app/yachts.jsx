@@ -1,33 +1,36 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export default function PlaneBrandsScreen({ navigation }) {
+export default function YachtsScreen({ navigation }) {
   return (
     <View style={styles.container}>
         <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
+        <Text style={styles.headerText}>Yachts</Text>
+        <Image source={require('../assets/Line.png')} style={styles.headerTextLine} />
+        <Image source={require('../assets/ShoppingBasket.png')} style={styles.headerImageCart} />
+        <Text style={styles.bodyTextSecond}>Filter</Text>
+        <Image source={require('../assets/Arrow.png')} style={styles.FilterDown} />
         <View style={styles.body}>
             <Image source={require('../assets/TopFade.png')} style={styles.TopFade} />
             <Image source={require('../assets/BottomFade.png')} style={styles.BottomFade} />
-            <Text style={styles.headerText}>Brands</Text>
-            <Image source={require('../assets/Line.png')} style={styles.headerTextLine} />
             <View style={styles.carBrandsList}>
-              <TouchableOpacity onPress={() => navigation.navigate('embraer')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/EmbraerBanner.png')}  style={styles.carBrandImage} />
+              <TouchableOpacity onPress={() => navigation.navigate('adastra')} style={styles.carBrandImageClick} >
+                <Image source={require('../assets/Adastra.png')}  style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/GulfstreamBanner.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/YachtsTwo.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/BombardierBanner.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/YachtsThree.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/BoeingBanner.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/YachtsFour.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/DassaultSystemesBanner.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/YachtsFive.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/CessnaBanner.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/YachtsFive.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
             </View>
         </View>
@@ -67,6 +70,14 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '20%',
   },
+  headerImageCart: {
+    zIndex: 2,
+    position: 'absolute',
+    top: 130,
+    right: 30,
+    width: 25,
+    height: 25,
+  },
   header: {
     height: 80,
     justifyContent: 'center',
@@ -77,19 +88,39 @@ const styles = StyleSheet.create({
   },
   headerText: {
     position: 'absolute',
-    top: 0,
-    width: '100%',
-    textAlign: 'center',
+    top: 120,
     color: 'white',
-    zIndex: 2, 
-    fontSize: 40,
+    fontSize: 35,
+    textAlign: 'center',
+    width: '100%',
+    fontWeight: 'normal',
+    zIndex: 2,
+  },
+  bodyTextSecond: {
+    position: 'absolute',
+    top: 165,
+    color: 'white',
+    fontSize: 20,
+    textAlign: 'center',
+    width: '100%',
+    fontWeight: 'normal',
+    zIndex: 2,
+  },
+  FilterDown: {
+    position: 'absolute',
+    top: 171,
+    right: 175,
+    width: 13,
+    height: 13,
+    zIndex: 2,
   },
   headerTextLine: {
     position: 'absolute',
-    top: 50,
-    width: '70%',
-    height: '0.65%',
-    zIndex: 2, 
+    top: 155,
+    alignSelf: 'center',
+    width: '90%',
+    height: '0.7%',
+    zIndex: 2,
   },
   body: {
     flex: 1,
@@ -99,7 +130,7 @@ const styles = StyleSheet.create({
   carBrandsList: {
     flex: 1,
     position: 'absolute',
-    top: 140,
+    top: 170,
     height: '100%',
     width: '100%',
     alignItems: 'center',
@@ -108,14 +139,10 @@ const styles = StyleSheet.create({
   carBrandImageClick: {
     width: '100%',
     height: '20%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   carBrandImage: {
-    width: '90%',
-    height: '90%',
-    objectFit: 'fill',
+    width: '100%',
+    height: '100%',
   },
   bodyText: {
     color: 'white',

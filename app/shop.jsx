@@ -20,15 +20,23 @@ export default function ShopScreen({ navigation }) {
             <TouchableOpacity onPress={() => navigation.navigate('carBrands')}>
               <Text style={styles.LocationInformationHeader}>Cars</Text>
             </TouchableOpacity>
-            <Text style={styles.LocationInformationHeader}>Motorcycle</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('motorcycleBrands')}>
+              <Text style={styles.LocationInformationHeader}>Motorcycle</Text>
+            </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('planeBrands')}>
               <Text style={styles.LocationInformationHeaderNo}>Planes</Text>
             </TouchableOpacity>
           </View>
         )}
-        <Image source={require('../assets/Suits.png')} style={styles.bodyChoiceImageTwo} />
+        <TouchableOpacity onPress={() => navigation.navigate('suits')} style={styles.bodyChoiceImageTwoBox}>
+          <Image source={require('../assets/Suits.png')} style={styles.bodyChoiceImageTwo} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('watches')} style={styles.bodyChoiceImageThreeBox}>
         <Image source={require('../assets/Watches.png')} style={styles.bodyChoiceImageThree} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('yachts')} style={styles.bodyChoiceImageFourBox}>
         <Image source={require('../assets/Yachts.png')} style={styles.bodyChoiceImageFour} />
+        </TouchableOpacity>
         <Image source={require('../assets/Mansions.png')} style={styles.bodyChoiceImageFive} />
       </View>
       <View style={styles.footer}>
@@ -73,30 +81,42 @@ const styles = StyleSheet.create({
     left: '-5%',
     top: '5%',
   },
-  bodyChoiceImageOne: {
-    height: '100%',
-    width: '100%',
-  },
-  bodyChoiceImageTwo: {
+  bodyChoiceImageTwoBox: {
     position: 'absolute',
     height: '17%',
     width: '80%',
     right: '-5%',
     top: '22.5%',
   },
-  bodyChoiceImageThree: {
+  bodyChoiceImageOne: {
+    height: '100%',
+    width: '100%',
+  },
+  bodyChoiceImageTwo: {
+    height: '100%',
+    width: '100%',
+  },
+  bodyChoiceImageThreeBox: {
     position: 'absolute',
     height: '17%',
     width: '80%',
     left: '-5%',
     top: '40%',
   },
-  bodyChoiceImageFour: {
+  bodyChoiceImageThree: {
+    height: '100%',
+    width: '100%',
+  },
+  bodyChoiceImageFourBox: {
     position: 'absolute',
     height: '17%',
     width: '80%',
     right: '-5%',
     top: '57.5%',
+  },
+  bodyChoiceImageFour: {
+    height: '100%',
+    width: '100%',
   },
   bodyChoiceImageFive: {
     position: 'absolute',

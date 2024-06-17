@@ -116,6 +116,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   bodyButtons: {
+    fontSize: 15,
     color: 'white',
     paddingHorizontal: 20,
     paddingVertical: 10,

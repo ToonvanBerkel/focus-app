@@ -1,75 +1,37 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
 
-export default function RevueltoScreen({ navigation }) {
+export default function RolexScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
       <ScrollView contentContainerStyle={styles.body}>
         <View style={styles.sectionOne}>
-          <Image source={require('../assets/RevueltoBg.png')} style={styles.bodyImage} />
+          <Image source={require('../assets/RolexBg.png')} style={styles.bodyImage} />
           <View style={styles.bodyTitle}>
-            <Text style={styles.bodyText}>REVUELTO</Text>
-            <Text style={styles.bodyTextSmaller}>FROM NOW ON</Text>
-            <View style={styles.bodyDetail}>
-              <Text style={styles.bodyTextSmall}>POWER (combined ICE+EE)</Text>
-              <Text style={styles.bodyTextSmallSpace}>1015 CV</Text>
-              <Text style={styles.bodyTextSmall}>MAX. SPEED</Text>
-              <Text style={styles.bodyTextSmallSpace}>>350 km/h</Text>
-              <Text style={styles.bodyTextSmall}>0-100 km/h</Text>
-              <Text style={styles.bodyTextSmall}>2.5 s</Text>
-            </View>
+            <Text style={styles.bodyText}>ROLEX</Text>
+            <Text style={styles.bodyTextSmaller}>OYSTER  PERPETUAL SUBMARINER</Text>
           </View>
-          <Text style={styles.bodyTextNote}>To get a custom made Revuelto visit one of our locations.</Text>
+          <Text style={styles.bodyTextNote}>To get a custom made Rolex visit one of our locations.</Text>
         </View>
         <View style={styles.sectionTwo}>
-          <Image source={require('../assets/RevueltoVideo.png')} style={styles.productVideo} />
-          <Text style={styles.bodyOverview}>Overview</Text>
+          <Image source={require('../assets/RolexVideo.png')} style={styles.productVideo} />
+          <Text style={styles.bodyOverview}>Beneath the surface</Text>
           <Text style={styles.bodyOverviewText}>
-            Just before the 60th anniversary of the marque, Lamborghini unveiled Revuelto, the first HPEV (High Performance Electrified Vehicle) hybrid super sports car. With the Revuelto, Lamborghini has established a new benchmark in performance, on-board technology, and driving pleasure. The ultimate thrill provided by the Revuelto is reached thanks to a powertrain that delivers 1015 CV total, combining the power of a brand-new 12-cylinder internal combustion engine with three high-density electric motors and a groundbreaking transversal dual clutch e-gearbox. The power of hybridization is harnessed to take performance and driving emotions to an unprecedented level.
+            Launched in 1953, the Rolex Submariner is the first divers’ wristwatch to be waterproof to a depth of 100 metres (330 feet) – now 300 metres (1,000 feet). Its major features, such as the graduated rotatable bezel, the luminescent display, the large hands and hour markers, have been a driving force in the creation of the long line of Rolex divers’ watches which followed.
           </Text>
           <Text style={styles.bodyOverviewText}>
-            Availability of the Lamborghini models may vary depending on the country. For more information, contact your local dealer.
+            The Submariner is an iconic timepiece whose renown now extends beyond the professional world it was first designed for. The Submariner, the ultimate standard.
           </Text>
-          <Text style={styles.bodyOverview}>Specifications</Text>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>DISPLACEMENT</Text>
-            <Text style={styles.specificationProperty}>6498.5 cm³ (396.6 cu in)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>MAX POWER (COMBINED ICE+EE)</Text>
-            <Text style={styles.specificationProperty}>1015 CV</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>TOP SPEED</Text>
-            <Text style={styles.specificationProperty}>>350 km/h</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>ACCELERATION 0-100 KM/H</Text>
-            <Text style={styles.specificationProperty}>2.5 s</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>COMBINED CONSUMPTION</Text>
-            <Text style={styles.specificationProperty}>11,86 l/100km (WLTP)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>COMBINED CO2 EMISSIONS</Text>
-            <Text style={styles.specificationProperty}>276 g/km (WLTP)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>ACCELERATION 0-100 KM/H</Text>
-            <Text style={styles.specificationProperty}>10,1 kWh/100 Km (WLTP)</Text>
-          </View>
-          <View style={styles.specificationNo}>
-            <Text style={styles.specificationName}>CO2 EFFICIENCY CLASS COMBINED</Text>
-            <Text style={styles.specificationProperty}>G (WLTP)</Text>
-          </View>
-          <Text style={styles.note}>If you want more information visit the official site.</Text>
+          <Text style={styles.bodyOverview}>A true divers’ watch by design</Text>
+          <Text style={styles.bodyOverviewText}>
+            As an underwater survival tool, this watch’s design has been entirely dictated by the practical needs of divers. Since 1953, the Submariner has evolved technically and aesthetically as it has been endowed with features to improve overall functionality. The first watch was a pioneer and its subsequent versions have continued to set the benchmark for divers’ watches.
+          </Text>
         </View>
       </ScrollView>
       <Image source={require('../assets/BottomFade.png')} style={styles.BottomFade} />
       <View style={styles.footerSecond}>
-        <Text style={styles.footerPrice}>Price $6.000.000,-</Text>
+        <Text style={styles.footerPrice}>Price $60.000,-</Text>
         <TouchableOpacity onPress={() => navigation.navigate('cart')} style={styles.footerShoppingCart}>
           <Text style={styles.footerShoppingCartText}>Add to cart</Text>
           <Image source={require('../assets/ShoppingBasket.png')} style={styles.footerImageCart} />
@@ -183,9 +145,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: '50%',
-    marginBottom: 120,
-    paddingTop: 100,
+    height: 830,
+    overflow: 'hidden',
+    marginBottom: 50,
   },
   sectionTwo: {
     justifyContent: 'center',
@@ -229,17 +191,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '90%',
     fontWeight: 'normal',
-    marginTop: 250,
+    marginTop: 450,
   },
   productVideo: {
     width: '80%',
     height: 200,
+    marginTop: 50,
   },
-  bodyDetail: {
-    marginTop: 10,
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
+  productModel: {
+    width: '90%',
+    height: 220,
+    objectFit: 'contain',
   },
   bodyTitle: {
     width: '100%',
@@ -262,7 +224,7 @@ const styles = StyleSheet.create({
   },
   bodyTextSmaller: {
     color: 'white',
-    fontSize: 30,
+    fontSize: 24,
     textAlign: 'center',
     width: '80%',
     fontWeight: 'normal',
@@ -275,7 +237,7 @@ const styles = StyleSheet.create({
   bodyImage: {
     position: 'absolute',
     width: '100%',
-    height: '130%',
+    height: 860,
     zIndex: 0,
   },
   spaceFooter: {

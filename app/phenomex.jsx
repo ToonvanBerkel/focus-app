@@ -1,70 +1,36 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
 
-export default function RevueltoScreen({ navigation }) {
+export default function PhenomExScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
       <ScrollView contentContainerStyle={styles.body}>
         <View style={styles.sectionOne}>
-          <Image source={require('../assets/RevueltoBg.png')} style={styles.bodyImage} />
+          <Image source={require('../assets/PhenomEXBg.png')} style={styles.bodyImage} />
           <View style={styles.bodyTitle}>
-            <Text style={styles.bodyText}>REVUELTO</Text>
-            <Text style={styles.bodyTextSmaller}>FROM NOW ON</Text>
+            <Text style={styles.bodyText}>PHENOM 300EX</Text>
+            <Text style={styles.bodyTextSmaller}>EXPERIENCE EXCELLENCE</Text>
             <View style={styles.bodyDetail}>
-              <Text style={styles.bodyTextSmall}>POWER (combined ICE+EE)</Text>
-              <Text style={styles.bodyTextSmallSpace}>1015 CV</Text>
+              <Text style={styles.bodyTextSmall}>WEIGHT</Text>
+              <Text style={styles.bodyTextSmallSpace}>4875 KG</Text>
               <Text style={styles.bodyTextSmall}>MAX. SPEED</Text>
-              <Text style={styles.bodyTextSmallSpace}>>350 km/h</Text>
-              <Text style={styles.bodyTextSmall}>0-100 km/h</Text>
-              <Text style={styles.bodyTextSmall}>2.5 s</Text>
+              <Text style={styles.bodyTextSmall}>752 km/h</Text>
             </View>
           </View>
           <Text style={styles.bodyTextNote}>To get a custom made Revuelto visit one of our locations.</Text>
         </View>
         <View style={styles.sectionTwo}>
-          <Image source={require('../assets/RevueltoVideo.png')} style={styles.productVideo} />
+          <Image source={require('../assets/PhenomEXVideo.png')} style={styles.productVideo} />
           <Text style={styles.bodyOverview}>Overview</Text>
           <Text style={styles.bodyOverviewText}>
-            Just before the 60th anniversary of the marque, Lamborghini unveiled Revuelto, the first HPEV (High Performance Electrified Vehicle) hybrid super sports car. With the Revuelto, Lamborghini has established a new benchmark in performance, on-board technology, and driving pleasure. The ultimate thrill provided by the Revuelto is reached thanks to a powertrain that delivers 1015 CV total, combining the power of a brand-new 12-cylinder internal combustion engine with three high-density electric motors and a groundbreaking transversal dual clutch e-gearbox. The power of hybridization is harnessed to take performance and driving emotions to an unprecedented level.
+            The Phenom 100EX isn't just a jet; it's an embodiment of comfort and innovation harmoniously entwined. The high-tech interior design represents the epitome of comfort, while its operational versatility ensures you're ready for any journey. With enhanced single-pilot-friendly avionics and pioneering safety features, whether you're a seasoned pilot or a passenger seeking the utmost comfort, the Phenom 100EX is the ultimate match for those who demand excellence.
           </Text>
           <Text style={styles.bodyOverviewText}>
-            Availability of the Lamborghini models may vary depending on the country. For more information, contact your local dealer.
+            Fly away with the confidence that only a Phenom 100EX can offer you.
           </Text>
-          <Text style={styles.bodyOverview}>Specifications</Text>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>DISPLACEMENT</Text>
-            <Text style={styles.specificationProperty}>6498.5 cm³ (396.6 cu in)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>MAX POWER (COMBINED ICE+EE)</Text>
-            <Text style={styles.specificationProperty}>1015 CV</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>TOP SPEED</Text>
-            <Text style={styles.specificationProperty}>>350 km/h</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>ACCELERATION 0-100 KM/H</Text>
-            <Text style={styles.specificationProperty}>2.5 s</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>COMBINED CONSUMPTION</Text>
-            <Text style={styles.specificationProperty}>11,86 l/100km (WLTP)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>COMBINED CO2 EMISSIONS</Text>
-            <Text style={styles.specificationProperty}>276 g/km (WLTP)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>ACCELERATION 0-100 KM/H</Text>
-            <Text style={styles.specificationProperty}>10,1 kWh/100 Km (WLTP)</Text>
-          </View>
-          <View style={styles.specificationNo}>
-            <Text style={styles.specificationName}>CO2 EFFICIENCY CLASS COMBINED</Text>
-            <Text style={styles.specificationProperty}>G (WLTP)</Text>
-          </View>
-          <Text style={styles.note}>If you want more information visit the official site.</Text>
+          <Image source={require('../assets/PhenomEXModel.png')} style={styles.productModel} />
+          <Text style={styles.note}>To get a custom made Phenom visit one of our locations.</Text>
         </View>
       </ScrollView>
       <Image source={require('../assets/BottomFade.png')} style={styles.BottomFade} />
@@ -234,6 +200,12 @@ const styles = StyleSheet.create({
   productVideo: {
     width: '80%',
     height: 200,
+    marginTop: 50,
+  },
+  productModel: {
+    width: '90%',
+    height: 220,
+    objectFit: 'contain',
   },
   bodyDetail: {
     marginTop: 10,
@@ -275,7 +247,7 @@ const styles = StyleSheet.create({
   bodyImage: {
     position: 'absolute',
     width: '100%',
-    height: '130%',
+    height: '150%',
     zIndex: 0,
   },
   spaceFooter: {

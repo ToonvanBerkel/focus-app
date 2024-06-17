@@ -1,75 +1,92 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
 
-export default function RevueltoScreen({ navigation }) {
+export default function AdastraScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
       <ScrollView contentContainerStyle={styles.body}>
         <View style={styles.sectionOne}>
-          <Image source={require('../assets/RevueltoBg.png')} style={styles.bodyImage} />
+          <Image source={require('../assets/AdastraBg.png')} style={styles.bodyImage} />
           <View style={styles.bodyTitle}>
-            <Text style={styles.bodyText}>REVUELTO</Text>
-            <Text style={styles.bodyTextSmaller}>FROM NOW ON</Text>
-            <View style={styles.bodyDetail}>
-              <Text style={styles.bodyTextSmall}>POWER (combined ICE+EE)</Text>
-              <Text style={styles.bodyTextSmallSpace}>1015 CV</Text>
-              <Text style={styles.bodyTextSmall}>MAX. SPEED</Text>
-              <Text style={styles.bodyTextSmallSpace}>>350 km/h</Text>
-              <Text style={styles.bodyTextSmall}>0-100 km/h</Text>
-              <Text style={styles.bodyTextSmall}>2.5 s</Text>
-            </View>
+            <Text style={styles.bodyText}>ADASTRA</Text>
+            <Text style={styles.bodyTextSmaller}>140-Foot Trimaran ‘Adastra’</Text>
           </View>
-          <Text style={styles.bodyTextNote}>To get a custom made Revuelto visit one of our locations.</Text>
+          <Text style={styles.bodyTextNote}>To get a custom made Adastra visit one of our locations.</Text>
         </View>
         <View style={styles.sectionTwo}>
-          <Image source={require('../assets/RevueltoVideo.png')} style={styles.productVideo} />
+          <Image source={require('../assets/AdastraVideo.png')} style={styles.productVideo} />
           <Text style={styles.bodyOverview}>Overview</Text>
           <Text style={styles.bodyOverviewText}>
-            Just before the 60th anniversary of the marque, Lamborghini unveiled Revuelto, the first HPEV (High Performance Electrified Vehicle) hybrid super sports car. With the Revuelto, Lamborghini has established a new benchmark in performance, on-board technology, and driving pleasure. The ultimate thrill provided by the Revuelto is reached thanks to a powertrain that delivers 1015 CV total, combining the power of a brand-new 12-cylinder internal combustion engine with three high-density electric motors and a groundbreaking transversal dual clutch e-gearbox. The power of hybridization is harnessed to take performance and driving emotions to an unprecedented level.
+            Adastra is a 140′ (42.5m) Trimaran, built by McConaghy at their Zhuhai Facility in China.
           </Text>
           <Text style={styles.bodyOverviewText}>
-            Availability of the Lamborghini models may vary depending on the country. For more information, contact your local dealer.
+            Designed by John Shuttleworth, ​Adastra was created to meet the needs of a very experienced ocean voyaging couple and their family, who wanted to provide the level of comfort and style that would be expected in a yacht of this class and size.          
+          </Text>
+          <Text style={styles.bodyOverviewText}>
+            The beautiful superyacht has an exceptionally low fuel consumption and yet boasts excellent sea keeping qualities and luxurious accommodation.
+          </Text>
+          <Text style={styles.bodyOverviewText}>
+            Adastra’s 16 metre beam creates a spacious saloon area on the main deck which offers superb views through a panoramic window and accommodates a lounge area, dining table, and navigation station. A forward-facing door through the saloon window gives easy access to a large sunbed on the foredeck.
           </Text>
           <Text style={styles.bodyOverview}>Specifications</Text>
           <View style={styles.specification}>
+            <Text style={styles.specificationName}>LOA</Text>
+            <Text style={styles.specificationProperty}>42.5M</Text>
+          </View>
+          <View style={styles.specification}>
+            <Text style={styles.specificationName}>LENGTH WATERLINE</Text>
+            <Text style={styles.specificationProperty}>42M</Text>
+          </View>
+          <View style={styles.specification}>
+            <Text style={styles.specificationName}>BEAM</Text>
+            <Text style={styles.specificationProperty}>16M</Text>
+          </View>
+          <View style={styles.specification}>
+            <Text style={styles.specificationName}>DRAFT</Text>
+            <Text style={styles.specificationProperty}>1.12M</Text>
+          </View>
+          <View style={styles.specification}>
+            <Text style={styles.specificationName}>GUESTS ON BOARD</Text>
+            <Text style={styles.specificationProperty}>9</Text>
+          </View>
+          <View style={styles.specification}>
+            <Text style={styles.specificationName}>CREW</Text>
+            <Text style={styles.specificationProperty}>5-6</Text>
+          </View>
+          <View style={styles.specification}>
             <Text style={styles.specificationName}>DISPLACEMENT</Text>
-            <Text style={styles.specificationProperty}>6498.5 cm³ (396.6 cu in)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>MAX POWER (COMBINED ICE+EE)</Text>
-            <Text style={styles.specificationProperty}>1015 CV</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>TOP SPEED</Text>
-            <Text style={styles.specificationProperty}>>350 km/h</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>ACCELERATION 0-100 KM/H</Text>
-            <Text style={styles.specificationProperty}>2.5 s</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>COMBINED CONSUMPTION</Text>
-            <Text style={styles.specificationProperty}>11,86 l/100km (WLTP)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>COMBINED CO2 EMISSIONS</Text>
-            <Text style={styles.specificationProperty}>276 g/km (WLTP)</Text>
-          </View>
-          <View style={styles.specification}>
-            <Text style={styles.specificationName}>ACCELERATION 0-100 KM/H</Text>
-            <Text style={styles.specificationProperty}>10,1 kWh/100 Km (WLTP)</Text>
+            <Text style={styles.specificationProperty}>49T</Text>
           </View>
           <View style={styles.specificationNo}>
-            <Text style={styles.specificationName}>CO2 EFFICIENCY CLASS COMBINED</Text>
-            <Text style={styles.specificationProperty}>G (WLTP)</Text>
+            <Text style={styles.specificationName}>MAIN ENGINE</Text>
+            <Text style={styles.specificationProperty}>1 X 1,150HP</Text>
           </View>
-          <Text style={styles.note}>If you want more information visit the official site.</Text>
+          <View style={styles.Overview} >
+            <Image source={require('../assets/Enlarge.png')} style={styles.OverviewIcon} />
+            <Image source={require('../assets/ArrowLeft.png')} style={styles.viewLeft} />
+            <Image source={require('../assets/ArrowRight.png')} style={styles.viewRight} />
+            <Image source={require('../assets/ImageOverviewOne.png')} style={styles.OverviewImage} />
+            <View style={styles.OverviewList} >
+                <Image source={require('../assets/FadeRight.png')} style={styles.FadeRight} />
+                <Image source={require('../assets/ImageOverviewTwo.png')} style={styles.OverviewImageSmall} />
+                <Image source={require('../assets/ImageOverviewThree.png')} style={styles.OverviewImageSmall} />
+                <Image source={require('../assets/ImageOverviewFour.png')} style={styles.OverviewImageSmall} />
+                <Image source={require('../assets/ImageOverviewFive.png')} style={styles.OverviewImageSmall} />
+                <Image source={require('../assets/ImageOverviewSix.png')} style={styles.OverviewImageSmall} />
+                <Image source={require('../assets/ImageOverviewSeven.png')} style={styles.OverviewImageSmall} />
+                <Image source={require('../assets/ImageOverviewEight.png')} style={styles.OverviewImageSmall} />
+                <Image source={require('../assets/ImageOverviewNine.png')} style={styles.OverviewImageSmall} />
+                <Image source={require('../assets/ImageOverviewTen.png')} style={styles.OverviewImageSmall} />
+                <Image source={require('../assets/ImageOverviewEleven.png')} style={styles.OverviewImageSmall} />
+                <Image source={require('../assets/ImageOverviewTwelve.png')} style={styles.OverviewImageSmall} />
+            </View>
+          </View>
         </View>
       </ScrollView>
       <Image source={require('../assets/BottomFade.png')} style={styles.BottomFade} />
       <View style={styles.footerSecond}>
-        <Text style={styles.footerPrice}>Price $6.000.000,-</Text>
+        <Text style={styles.footerPrice}>Price $20.000.000,-</Text>
         <TouchableOpacity onPress={() => navigation.navigate('cart')} style={styles.footerShoppingCart}>
           <Text style={styles.footerShoppingCartText}>Add to cart</Text>
           <Image source={require('../assets/ShoppingBasket.png')} style={styles.footerImageCart} />
@@ -97,6 +114,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#0D0D0D',
   },
+  FadeRight: {
+    position: 'absolute',
+    right: -110,
+    top: 0,
+    height: 35,
+    width: 80,
+    zIndex: 1,
+  },
   BottomFade: {
     position: 'absolute',
     bottom: 0,
@@ -112,6 +137,49 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     zIndex: 2,
+  },
+  Overview: {
+    width: '80%',
+  },
+  OverviewList: {
+    marginTop: 10,
+    flexDirection: 'row',
+    height: 35,
+    width: '80%',
+  },
+  OverviewImageSmall: {
+    width: 35,
+    height: 35,
+    marginRight: 5,
+  },
+  viewLeft: {
+    position: 'absolute',
+    width: 20,
+    height: 20,
+    zIndex: 1,
+    top: 150,
+    left: 10,
+  },
+  viewRight: {
+    position: 'absolute',
+    width: 20,
+    height: 20,
+    zIndex: 1,
+    top: 150,
+    right: 10,
+  },
+  OverviewIcon: {
+    width: 20,
+    height: 20,
+    position: 'absolute',
+    right: 10,
+    top: 60,
+    zIndex: 1,
+  },
+  OverviewImage: {
+    width: 350,
+    height: 220,
+    marginTop: 50,
   },
   note: {
     fontWeight: 'normal',
@@ -183,9 +251,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: '50%',
-    marginBottom: 120,
-    paddingTop: 100,
+    height: 830,
+    overflow: 'hidden',
+    marginBottom: 50,
   },
   sectionTwo: {
     justifyContent: 'center',
@@ -229,17 +297,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: '90%',
     fontWeight: 'normal',
-    marginTop: 250,
+    marginTop: 450,
   },
   productVideo: {
     width: '80%',
     height: 200,
+    marginTop: 50,
   },
-  bodyDetail: {
-    marginTop: 10,
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
+  productModel: {
+    width: '90%',
+    height: 220,
+    objectFit: 'contain',
   },
   bodyTitle: {
     width: '100%',
@@ -262,7 +330,7 @@ const styles = StyleSheet.create({
   },
   bodyTextSmaller: {
     color: 'white',
-    fontSize: 30,
+    fontSize: 24,
     textAlign: 'center',
     width: '80%',
     fontWeight: 'normal',
@@ -275,7 +343,7 @@ const styles = StyleSheet.create({
   bodyImage: {
     position: 'absolute',
     width: '100%',
-    height: '130%',
+    height: 860,
     zIndex: 0,
   },
   spaceFooter: {
