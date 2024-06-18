@@ -32,12 +32,14 @@ export default function ShopScreen({ navigation }) {
           <Image source={require('../assets/Suits.png')} style={styles.bodyChoiceImageTwo} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('watches')} style={styles.bodyChoiceImageThreeBox}>
-        <Image source={require('../assets/Watches.png')} style={styles.bodyChoiceImageThree} />
+          <Image source={require('../assets/Watches.png')} style={styles.bodyChoiceImageThree} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('yachts')} style={styles.bodyChoiceImageFourBox}>
-        <Image source={require('../assets/Yachts.png')} style={styles.bodyChoiceImageFour} />
+          <Image source={require('../assets/Yachts.png')} style={styles.bodyChoiceImageFour} />
         </TouchableOpacity>
-        <Image source={require('../assets/Mansions.png')} style={styles.bodyChoiceImageFive} />
+        <TouchableOpacity onPress={() => navigation.navigate('mansions')} style={styles.bodyChoiceImageFiveBox}>
+          <Image source={require('../assets/Mansions.png')} style={styles.bodyChoiceImageFive} />
+        </TouchableOpacity>
       </View>
       <View style={styles.footer}>
         <View style={styles.spaceFooter}>
@@ -118,12 +120,16 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
   },
-  bodyChoiceImageFive: {
+  bodyChoiceImageFiveBox: {
     position: 'absolute',
     height: '17%',
     width: '80%',
     left: '-5%',
     top: '75%',
+  },
+  bodyChoiceImageFive: {
+    height: '100%',
+    width: '100%',
   },
   LocationInformation: {
     backgroundColor: 'black',

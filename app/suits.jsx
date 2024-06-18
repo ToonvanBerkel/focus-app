@@ -9,7 +9,9 @@ export default function SuitsScreen({ navigation }) {
         <Image source={require('../assets/BottomFade.png')} style={styles.BottomFade} />
       <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
       <Text style={styles.bodyText}>Suits</Text>
-      <Image source={require('../assets/ShoppingBasket.png')} style={styles.headerImageCart} />
+        <TouchableOpacity onPress={() => navigation.navigate('cart')} style={styles.headerImageCart}>
+            <Image source={require('../assets/ShoppingBasket.png')} style={styles.headerImageCartPic} />
+        </TouchableOpacity>
       <Image source={require('../assets/Line.png')} style={styles.headerTextLine} />
       <Text style={styles.bodyTextSecond}>Filter</Text>
       <Image source={require('../assets/Arrow.png')} style={styles.FilterDown} />
@@ -84,6 +86,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 130,
     right: 30,
+  },
+  headerImageCartPic: {
     width: 25,
     height: 25,
   },

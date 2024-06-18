@@ -6,7 +6,6 @@ export default function MenuScreen({ navigation }) {
     <View style={styles.container}>
       <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
       <View style={styles.body}>
-        
         <View style={styles.cart}>
           <View style={styles.cartItem}>
             <Image source={require('../assets/RolexCartExample.png')} style={styles.cartItemImage} />
@@ -24,7 +23,7 @@ export default function MenuScreen({ navigation }) {
         <TouchableOpacity onPress={() => navigation.navigate('shop')}>
           <Text style={styles.bodyButtons}>Continue shopping</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('index')}>
+        <TouchableOpacity onPress={() => navigation.navigate('checkout')}>
           <Text style={styles.bodyButtons}>Checkout</Text>
         </TouchableOpacity>
       </View>

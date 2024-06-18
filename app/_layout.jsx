@@ -6,6 +6,7 @@ import React from 'react';
 
 import MenuScreen from './menu.jsx';
 import CartScreen from './cart.jsx';
+import CheckoutScreen from './checkout.jsx'
 import HomeScreen from './index.jsx';
 import ShopScreen from './shop.jsx'
 import CarBrandsScreen from './carBrands.jsx';
@@ -24,6 +25,8 @@ import WatchesScreen from './watches.jsx';
 import RolexScreen from './rolex.jsx';
 import YachtsScreen from './yachts.jsx';
 import AdastraScreen from './adastra.jsx';
+import MansionsScreen from './mansions.jsx';
+import BarbaraCaliforniaScreen from './barbaraCalifornia.jsx';
 import LocationScreen from './location.jsx';
 import ContactScreen from './contact.jsx';
 import AboutUsScreen from './aboutus.jsx';
@@ -36,6 +39,7 @@ const RootLayout = () => {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="menu" component={MenuScreen} />
         <Stack.Screen name="cart" component={CartScreen} />
+        <Stack.Screen name="checkout" component={CheckoutScreen} />
         <Stack.Screen name="index" component={HomeScreen} />
         <Stack.Screen name="shop" component={ShopScreen} />
         <Stack.Screen name="carBrands" component={CarBrandsScreen} />
@@ -54,6 +58,8 @@ const RootLayout = () => {
         <Stack.Screen name="rolex" component={RolexScreen} />
         <Stack.Screen name="yachts" component={YachtsScreen} />
         <Stack.Screen name="adastra" component={AdastraScreen} />
+        <Stack.Screen name="mansions" component={MansionsScreen} />
+        <Stack.Screen name="barbaraCalifornia" component={BarbaraCaliforniaScreen} />
         <Stack.Screen name="location" component={LocationScreen} />
         <Stack.Screen name="contact" component={ContactScreen} />
         <Stack.Screen name="aboutus" component={AboutUsScreen} />

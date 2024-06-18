@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export default function YachtsScreen({ navigation }) {
+export default function MansionsScreen({ navigation }) {
   return (
     <View style={styles.container}>
         <Image source={require('../assets/logo_navbar.png')} style={styles.header} />
-        <Text style={styles.headerText}>Yachts</Text>
+        <Text style={styles.headerText}>Mansions</Text>
         <Image source={require('../assets/Line.png')} style={styles.headerTextLine} />
         <TouchableOpacity onPress={() => navigation.navigate('cart')} style={styles.headerImageCart}>
             <Image source={require('../assets/ShoppingBasket.png')} style={styles.headerImageCartPic} />
@@ -16,23 +16,23 @@ export default function YachtsScreen({ navigation }) {
             <Image source={require('../assets/TopFade.png')} style={styles.TopFade} />
             <Image source={require('../assets/BottomFade.png')} style={styles.BottomFade} />
             <View style={styles.carBrandsList}>
-              <TouchableOpacity onPress={() => navigation.navigate('adastra')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/Adastra.png')}  style={styles.carBrandImage} />
+              <TouchableOpacity onPress={() => navigation.navigate('barbaraCalifornia')} style={styles.carBrandImageClick} >
+                <Image source={require('../assets/BarbaraCalifornia.png')}  style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/YachtsTwo.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/MansionOne.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/YachtsThree.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/MansionTwo.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/YachtsFour.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/MansionThree.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/YachtsFive.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/MansionFour.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate('')} style={styles.carBrandImageClick} >
-                <Image source={require('../assets/YachtsFive.png')} style={styles.carBrandImage} />
+                <Image source={require('../assets/MansionOne.png')} style={styles.carBrandImage} />
               </TouchableOpacity>
             </View>
         </View>
