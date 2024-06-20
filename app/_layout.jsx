@@ -4,6 +4,7 @@ import store from './back-end/store.js';
 import { Provider } from 'react-redux';
 import React from 'react';
 
+import AdminScreen from './admin.jsx'
 import MenuScreen from './menu.jsx';
 import CartScreen from './cart.jsx';
 import CheckoutScreen from './checkout.jsx'
@@ -37,6 +38,7 @@ const RootLayout = () => {
   return (
     <Provider store={store}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="admin" component={AdminScreen} />
         <Stack.Screen name="menu" component={MenuScreen} />
         <Stack.Screen name="cart" component={CartScreen} />
         <Stack.Screen name="checkout" component={CheckoutScreen} />

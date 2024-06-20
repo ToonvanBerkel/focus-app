@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, Image, TouchableOpacity, TextInput, ScrollView,
 
 export default function ContactScreen({ navigation }) {
     const [isBoxVisible, setIsBoxVisible] = useState(false);
+    const [showAdminButton, setShowAdminButton] = useState(false);
     const fadeAnim = useRef(new Animated.Value(1)).current;
 
     const [name, setName] = useState('');
@@ -24,11 +25,15 @@ export default function ContactScreen({ navigation }) {
     }, [isBoxVisible, fadeAnim]);
 
     const handleSubmit = () => {
-        setIsBoxVisible(true);
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
+        if (name === "Admin-12345" && subject === "Xiahw123" && email === 'none' && message === 'none' ) {
+            setShowAdminButton(true);
+        } else {
+            setIsBoxVisible(true);
+            setName('');
+            setEmail('');
+            setSubject('');
+            setMessage('');
+        }
     };
 
     const isFormValid = () => {
@@ -82,6 +87,14 @@ export default function ContactScreen({ navigation }) {
                     <Animated.View style={[styles.SubmitMessage, { opacity: fadeAnim }]}>
                         <Text style={styles.SubmitMessageText}>Successfully submitted</Text>
                     </Animated.View>
+                )}
+                {showAdminButton && (
+                    <TouchableOpacity
+                        style={styles.adminButton}
+                        onPress={() => navigation.navigate('admin')}
+                    >
+                        <Text style={styles.adminButtonText}>Go to Admin</Text>
+                    </TouchableOpacity>
                 )}
             </ScrollView>
             <View style={styles.footer}>
@@ -163,7 +176,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         marginTop: 20,
-        marginBottom: 90,
+        marginBottom: 20,
     },
     disabledButton: {
         backgroundColor: '#9A9A9A',
@@ -173,27 +186,43 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
     },
+    adminButton: {
+        backgroundColor: '#426465',
+        borderRadius: 5,
+        height: 40,
+        position: 'absolute',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        marginTop: 10,
+        marginBottom: 90,
+    },
+    adminButtonText: {
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
     spaceFooter: {
-      height: 50,
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      flexDirection: 'row',
-      width: '90%',
+        height: 50,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row',
+        width: '90%',
     },
     footer: {
-      height: 50,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'rgba(217, 217, 217, 0.24)',
-      marginBottom: 10,
-      width: '90%',
-      marginLeft: '5%',
+        height: 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(217, 217, 217, 0.24)',
+        marginBottom: 10,
+        width: '90%',
+        marginLeft: '5%',
     },
     footerImage: {
-      height: 20,
-      width: 30,
+        height: 20,
+        width: 30,
     },
     footerText: {
-      color: 'white',
+        color: 'white',
     },
 });
